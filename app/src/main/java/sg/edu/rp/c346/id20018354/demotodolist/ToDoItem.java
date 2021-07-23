@@ -28,10 +28,10 @@ public class ToDoItem {
         this.date = date;
     }
 
-    public String toString() {
-        String str = date.get(Calendar.DAY_OF_MONTH) + "/" + date.get(Calendar.MONTH)
+    public String getDateString() {
+        String datestr = date.get(Calendar.DAY_OF_MONTH) + "/" + date.get(Calendar.MONTH)
                 + "/" + date.get(Calendar.YEAR) + " (" + getDay(date.get(Calendar.DAY_OF_WEEK)) + ")";
-        return str;
+        return datestr;
     }
 
     private String getDay(int day) {
