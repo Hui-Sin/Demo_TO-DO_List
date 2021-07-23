@@ -3,6 +3,7 @@ package sg.edu.rp.c346.id20018354.demotodolist;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     ListView lvToDo;
     ArrayList<ToDoItem> alToDoList;
+    //ArrayAdapter<ToDoItem> aaToDoItem;
     CustomAdapter caToDo;
 
     @Override
@@ -31,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         alToDoList.add(item1);
         alToDoList.add(item2);
 
+        //aaToDoItem = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,alToDoList);
+        //lvToDo.setAdapter(aaToDoItem);
         caToDo = new CustomAdapter(this, R.layout.row, alToDoList);
 
         lvToDo.setAdapter(caToDo);
